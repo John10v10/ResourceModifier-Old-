@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57999B39-C9D5-4628-8739-1DB368447CBF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ResourceModifier</RootNamespace>
+    <AssemblyName>ResourceModifier</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonTypes\ActionEventInfo.cs" />
+    <Compile Include="CommonTypes\ArrayExtension.cs" />
+    <Compile Include="CommonTypes\AttributeInfo.cs" />
+    <Compile Include="CommonTypes\BigEndianTypes.cs" />
+    <Compile Include="CommonTypes\BinaryHandlers.cs" />
+    <Compile Include="CommonTypes\Box.cs" />
+    <Compile Include="CommonTypes\ByteExtension.cs" />
+    <Compile Include="CommonTypes\CoolTimer.cs" />
+    <Compile Include="CommonTypes\DoubleExtension.cs" />
+    <Compile Include="CommonTypes\DVector3.cs" />
+    <Compile Include="CommonTypes\Helpers.cs" />
+    <Compile Include="CommonTypes\Int16Extension.cs" />
+    <Compile Include="CommonTypes\Int24.cs" />
+    <Compile Include="CommonTypes\Int32Extension.cs" />
+    <Compile Include="CommonTypes\Int64Extension.cs" />
+    <Compile Include="CommonTypes\ListExtension.cs" />
+    <Compile Include="CommonTypes\Matrix.cs" />
+    <Compile Include="CommonTypes\Matrix34.cs" />
+    <Compile Include="CommonTypes\Matrix4d.cs" />
+    <Compile Include="CommonTypes\PixelTypes.cs" />
+    <Compile Include="CommonTypes\PString.cs" />
+    <Compile Include="CommonTypes\Remapper.cs" />
+    <Compile Include="CommonTypes\RoundingExtensions.cs" />
+    <Compile Include="CommonTypes\SingleExtension.cs" />
+    <Compile Include="CommonTypes\StringConverters.cs" />
+    <Compile Include="CommonTypes\StringExtension.cs" />
+    <Compile Include="CommonTypes\TypeConverters.cs" />
+    <Compile Include="CommonTypes\UInt16Extension.cs" />
+    <Compile Include="CommonTypes\UInt24.cs" />
+    <Compile Include="CommonTypes\UInt32Extension.cs" />
+    <Compile Include="CommonTypes\UInt64Extension.cs" />
+    <Compile Include="CommonTypes\Vector2.cs" />
+    <Compile Include="CommonTypes\Vector3.cs" />
+    <Compile Include="CommonTypes\Vector4.cs" />
+    <Compile Include="CommonTypes\VoidPtr.cs" />
+    <Compile Include="CommonTypes\VQuant.cs" />
+    <Compile Include="Controls\BufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GoodColorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GoodColorControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\GoodPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="File.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Math\Map.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
